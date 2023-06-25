@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="CSS/Inicio.css">
+
+    <script src="JS/Categorias.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <!-- Incluir jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Incluir Popper.js -->
+    <script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+    <!-- Incluir Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class=" row">
+        <div class="col-md-12  d-flex justify-content-end mt-2">
+            <button type="button" class="btn btn-primary mr-3" data-toggle="modal" data-target="#ModalAgregarCategoria">
+              Agregar
+            </button>
+          </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="ModalAgregarCategoria" tabindex="-1" role="dialog" aria-labelledby="ModalAgregarCategoriaLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalAgregarCategoriaLabel">Agregar categoría</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" placeholder="Ingrese categoría">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-11">
+            <table class="table">
+
+                <thead class="thead-dark">
+
+                    <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Categoría</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Objeto1</td>
+                        <td>
+                            <button class="btn btn-primary" onclick="editFunction()">
+                                <i class="fas fa-edit"></i>
+                              </button>
+                              <button class="btn btn-danger" onclick="deleteFunction()">
+                                <i class="fas fa-trash"></i>
+                              </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Objeto2</td>
+                        <td>
+                            <button class="btn btn-primary" onclick="editFunction()">
+                                <i class="fas fa-edit"></i>
+                              </button>
+                              <button class="btn btn-danger" onclick="deleteFunction()">
+                                <i class="fas fa-trash"></i>
+                              </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Objeto3</td>
+                        <td>
+                            <button class="btn btn-primary" onclick="editFunction()">
+                                <i class="fas fa-edit"></i>
+                              </button>
+                              <button class="btn btn-danger" onclick="deleteFunction()">
+                                <i class="fas fa-trash"></i>
+                              </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

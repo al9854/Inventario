@@ -1,0 +1,36 @@
+.bg-success2
+{
+      background-color: white; 
+}
+
+.col-md-12 {
+    text-align: center;
+  }
+
+  .col-md-12 h4 {
+    margin-top: 50px;
+  }
+.col    
+{
+width: 10px;
+height: 10px;
+
+}
+
+  .table {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    font-style: italic;
+    caption-side: bottom;
+    text-align: right;
+    letter-spacing: 1px;
+    border-collapse: collapse; 
+    border: 4px solid #042331;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  th, td {
+    border: 2px solid #042331; 
+  }
