@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <title>Inicio</title>
-    <link rel="stylesheet" href="CSS/Inicio.css">
+    <link rel="stylesheet" href="CSS/Categorias.css">
 
     <script src="JS/Categorias.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -29,7 +29,7 @@
             </button>
           </div>
 
-        <!-- Modal -->
+        <!-- Modal Agregar-->
         <div class="modal fade" id="ModalAgregarCategoria" tabindex="-1" role="dialog" aria-labelledby="ModalAgregarCategoriaLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -53,6 +53,63 @@
         </div>
     </div>
 
+  <!-- Modal Editar -->
+    
+  <div class="modal fade" id="ModalEditarCategoria" tabindex="-1" role="dialog" aria-labelledby="ModalEditarCategoriaLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="ModalEditarCategoriaLabel">Editar Categoría</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          
+          <div class="modal-body">
+          <div class="row mb-3">
+              <div class="col-md-6">
+              <label>Nombre</label>
+              <input type="text" class="form-control" Value="Objeto1">
+              </div>
+          </div>
+  </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Actualizar</button>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+
+
+<!-- Modal Eliminar -->
+
+<div class="modal fade" id="ModalEliminarCategoria" tabindex="-1" role="dialog" aria-labelledby="ModalEliminarCategoriaLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="ModalEliminarCategoriaLabel">Eliminar categoría</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          
+          <div class="modal-body">
+          <label>¿Esta seguro de eliminar el registro?</label>  
+           </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Eliminar</button>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+
+
     <div class="row">
         <div class="col-md-11">
             <table class="table">
@@ -70,10 +127,10 @@
                         <th scope="row">1</th>
                         <td>Objeto1</td>
                         <td>
-                            <button class="btn btn-primary" onclick="editFunction()">
+                            <button  class="btn btn-primary" data-toggle="modal" data-target="#ModalEditarCategoria">
                                 <i class="fas fa-edit"></i>
                               </button>
-                              <button class="btn btn-danger" onclick="deleteFunction()">
+                              <button  class="btn btn-danger" data-toggle="modal" data-target="#ModalEliminarCategoria">
                                 <i class="fas fa-trash"></i>
                               </button>
                         </td>
@@ -82,10 +139,10 @@
                         <th scope="row">2</th>
                         <td>Objeto2</td>
                         <td>
-                            <button class="btn btn-primary" onclick="editFunction()">
+                            <button  class="btn btn-primary" data-toggle="modal" data-target="#ModalEditarCategoria">
                                 <i class="fas fa-edit"></i>
                               </button>
-                              <button class="btn btn-danger" onclick="deleteFunction()">
+                              <button  class="btn btn-danger" data-toggle="modal" data-target="#ModalEliminarCategoria">
                                 <i class="fas fa-trash"></i>
                               </button>
                         </td>
@@ -94,10 +151,10 @@
                         <th scope="row">3</th>
                         <td>Objeto3</td>
                         <td>
-                            <button class="btn btn-primary" onclick="editFunction()">
+                            <button  class="btn btn-primary" data-toggle="modal" data-target="#ModalEditarCategoria">
                                 <i class="fas fa-edit"></i>
                               </button>
-                              <button class="btn btn-danger" onclick="deleteFunction()">
+                              <button  class="btn btn-danger" data-toggle="modal" data-target="#ModalEliminarCategoria">
                                 <i class="fas fa-trash"></i>
                               </button>
                         </td>

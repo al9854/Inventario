@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="CSS/Almacen.css">
+
+    <script src="JS/Almacen.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <!-- Incluir jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Incluir Popper.js -->
+    <script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+    <!-- Incluir Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    
+        <!-- Modal Agregar -->
+    <div class=" row">
+        <div class="col-md-12  d-flex justify-content-end mt-2">
+            <button type="button" class="btn btn-primary mr-3" data-toggle="modal" data-target="#ModalAgregarAlmacen">
+              Agregar
+            </button>
+          </div>
+
+        <div class="modal fade" id="ModalAgregarAlmacen" tabindex="-1" role="dialog" aria-labelledby="ModalAgregarAlmacenLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalAgregarAlmacenLabel">Agregar almacén</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                        <label>Nombre</label>
+                        <input type="text" id="txtnombre" class="form-control" placeholder="Ingrese nombre">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                        <label>Área</label>
+                        <input type="text" id="txtarea" class="form-control" placeholder="Ingrese área">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+           <!-- Modal Editar -->
+    
+            <div class="modal fade" id="ModalEditarAlmacen" tabindex="-1" role="dialog" aria-labelledby="ModalEditarAlmacenLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ModalEditarAlmacenLabel">Editar almacén</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        
+                        <div class="modal-body">
+                            <div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                            <label>Nombre</label>
+                            <input type="text" id="txtnombre" class="form-control" Value="Objeto1">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                            <label>Área</label>
+                            <input type="text" id="txtarea" class="form-control" Value="Área1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary">Actualizar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+           <!-- Modal Eliminar -->
+    
+            <div class="modal fade" id="ModalEliminarAlmacen" tabindex="-1" role="dialog" aria-labelledby="ModalEliminarAlmacenLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ModalEliminarAlmacenLabel">Eliminar almacén</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        
+                        <div class="modal-body">
+                        <label>¿Esta seguro de eliminar el registro?</label>  
+                         </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="row">
+        <div class="col-md-11">
+            <table class="table">
+                <thead class="thead-dark">
+
+                    <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Área</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Objeto1</td>
+                        <td>Area1</td>
+                        <td>
+                            <button  class="btn btn-primary" data-toggle="modal" data-target="#ModalEditarAlmacen">
+                                <i class="fas fa-edit"></i>
+                              </button>
+                              <button  class="btn btn-danger" data-toggle="modal" data-target="#ModalEliminarAlmacen">
+                                <i class="fas fa-trash"></i>
+                              </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Objeto2</td>
+                        <td>Area2</td>
+                        <td>
+                            <button  class="btn btn-primary" data-toggle="modal" data-target="#ModalEditarAlmacen">
+                                <i class="fas fa-edit"></i>
+                              </button>
+                              <button  class="btn btn-danger" data-toggle="modal" data-target="#ModalEliminarAlmacen">
+                                <i class="fas fa-trash"></i>
+                              </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Objeto3</td>
+                        <td>Area3</td>
+                        <td>
+                            <button  class="btn btn-primary" data-toggle="modal" data-target="#ModalEditarAlmacen">
+                                <i class="fas fa-edit"></i>
+                              </button>
+                              <button  class="btn btn-danger" data-toggle="modal" data-target="#ModalEliminarAlmacen">
+                                <i class="fas fa-trash"></i>
+                              </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

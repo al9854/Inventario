@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Productos</title>
+    <link rel="stylesheet" href="CSS/Productos.css">
+
+    <script src="JS/Productos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <!-- Incluir jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <!-- Incluir Popper.js -->
+    <script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+    <!-- Incluir Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class=" row">
+        <div class="col-md-12  d-flex justify-content-end mt-2">
+            <button type="button" class="btn btn-primary mr-3" data-toggle="modal" data-target="#ModalAgregarProducto">
+              Agregar
+            </button>
+          </div>
+
+        <!-- Modal Agregar-->
+        <div class="modal fade" id="ModalAgregarProducto" tabindex="-1" role="dialog" aria-labelledby="ModalAgregarProductoLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalAgregarProductoLabel">Agregar Producto</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                <label>Descripción</label>
+                                <input type="text" id="txtproducto" class="form-control" placeholder="Ingrese producto">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <select class="form-control" id="cboTipo">
+                                        <option value="">Tipo</option>
+                                        <option value="0">Cemento</option>
+                                        <option value="1">Llave</option>
+                                        <option value="2">Claves</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="form-control" id="cboReferencia">
+                                        <option value="">Referencia</option>
+                                        <option value="0">Referencia1</option>
+                                        <option value="1">Referencia2</option>
+                                        <option value="2">Referencia3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <label>Cantidad</label>
+                                    <input type="text" id="txtcantidad" class="form-control">
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Stock</label>
+                                    <input type="text" id="txtstock" class="form-control">
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Precio</label>
+                                    <input type="text" id="txtprecio" class="form-control">
+                                </div>
+                            </div>
+                       
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- Modal Editar -->
+    
+      <div class="modal fade" id="ModalEditarProducto" tabindex="-1" role="dialog" aria-labelledby="ModalEditarProductoLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="ModalEditarProductoLabel">Editar producto</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              
+              <div class="modal-body">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                    <label>Descripción</label>
+                    <input type="text" id="txtproducto" class="form-control" Value="Cable desnudo cobre">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <select class="form-control" id="cboTipo">
+                            <option value="3">Cables</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="form-control" id="cboReferencia">
+                            <option value="3">Referencia3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label>Cantidad</label>
+                        <input type="text" id="txtcantidad" class="form-control" value="10">
+                    </div>
+                    <div class="col-md-4">
+                        <label>Stock</label>
+                        <input type="text" id="txtstock" class="form-control" value="10">
+                    </div>
+                    <div class="col-md-4">
+                        <label>Precio</label>
+                        <input type="text" id="txtprecio" class="form-control" value="15.00">
+                    </div>
+                </div>
+      </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Actualizar</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+ <!-- Modal Eliminar -->
+
+  <div class="modal fade" id="ModalEliminarProducto" tabindex="-1" role="dialog" aria-labelledby="ModalEliminarProductoLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="ModalEliminarProductoLabel">Eliminar Producto</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              
+              <div class="modal-body">
+              <label>¿Esta seguro de eliminar el registro?</label>  
+               </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Eliminar</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+    <div class="row">
+        <div class="col-md-11">
+            <table class="table">
+
+                <thead class="thead-dark">
+
+                    <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Categoría</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Referencia</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Cables</td>
+                        <td>Cable desnudo cobre</td>
+                        <td></td>
+                        <td>15.00</td>
+                        <td>10</td>
+                        <td>
+                            <button  class="btn btn-primary" data-toggle="modal" data-target="#ModalEditarProducto">
+                                <i class="fas fa-edit"></i>
+                              </button>
+                              <button  class="btn btn-danger" data-toggle="modal" data-target="#ModalEliminarProducto">
+                                <i class="fas fa-trash"></i>
+                              </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Cemento</td>
+                        <td>Cemento Disagel</td>
+                        <td></td>
+                        <td>50.00</td>
+                        <td>2</td>
+                        <td>
+                            <button  class="btn btn-primary" data-toggle="modal" data-target="#ModalEditarProducto">
+                                <i class="fas fa-edit"></i>
+                              </button>
+                              <button  class="btn btn-danger" data-toggle="modal" data-target="#ModalEliminarProducto">
+                                <i class="fas fa-trash"></i>
+                              </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Llaves</td>
+                        <td>Tablero porta llaves</td>
+                        <td></td>
+                        <td>70.00</td>
+                        <td>15</td>
+                        <td>
+                            <button  class="btn btn-primary" data-toggle="modal" data-target="#ModalEditarProducto">
+                                <i class="fas fa-edit"></i>
+                              </button>
+                              <button  class="btn btn-danger" data-toggle="modal" data-target="#ModalEliminarProducto">
+                                <i class="fas fa-trash"></i>
+                              </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
